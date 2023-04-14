@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/create_password.xml" value="0.264" />
+        <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/fragment_graphical_password.xml" value="0.264" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/login.xml" value="0.3932291666666667" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/register.xml" value="0.4" />
       </map>

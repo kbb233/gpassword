@@ -1,32 +1,25 @@
 package com.example.graphicalpassword;
 
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-
 public class Register extends AppCompatActivity {
-    private UserDataBaseHelper userDataBaseHelper;
+    private UserDataBaseHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
-        Spinner spinnerMethod=findViewById(R.id.spinner_loginMethod);
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.login_method, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinnerMethod.setAdapter(adapter);
+        dbHelper = new UserDataBaseHelper(this);
         initCheckUsername();
-        DatabaseConnection db = new DatabaseConnection();
-        db.connect();
+
     }
 
     private void initCheckUsername() {
@@ -35,10 +28,27 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //check username
-                String username = findViewById(R.id.username_input).toString();
-                String query = "SELECT username FROM user WHERE username = ?";
-
+                EditText username = findViewById(R.id.username_input);
+                String name = username.getText().toString();
+                if (usernameExists(name)) {
+                    Toast.makeText(Register.this, "Username already exists. Please use another one.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(Register.this, CreatePassword.class);
+                    intent.putExtra("username", name);
+                    startActivity(intent);
+                }
             }
         });
+    }
+
+    private boolean usernameExists(String username) {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String selection = UserDataBaseHelper.COLUMN_USERNAME + " = ?";
+        String[] selectionArgs = {username};
+        Cursor cursor = db.query(UserDataBaseHelper.TABLE_USERS, null, selection, selectionArgs, null, null, null);
+
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
     }
 }

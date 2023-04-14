@@ -2,7 +2,6 @@ package com.example.graphicalpassword;
 
 public class User {
     private String username;
-    private String loginMethod;
     private String textPassword;
     private String graphPassword;
     private String profile;
@@ -15,14 +14,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getLoginMethod() {
-        return loginMethod;
-    }
-
-    public void setLoginMethod(String loginMethod) {
-        this.loginMethod = loginMethod;
     }
 
     public String getTextPassword() {
