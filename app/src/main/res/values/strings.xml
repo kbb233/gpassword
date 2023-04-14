@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Graphical Password</string>
+    <string-array name="login_method">
+        <item>test password</item>
+        <item>graphical password</item>
+        <item>both</item>
+    </string-array>
+</resources>
