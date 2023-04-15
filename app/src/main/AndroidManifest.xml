@@ -18,6 +18,9 @@
         <activity android:name=".Login"/>
         <activity android:name=".Register"/>
         <activity android:name=".CreatePassword"/>
+        <activity android:name=".CreateProfile"/>
+        <activity android:name=".UserProfile"/>
+        <activity android:name=".SecuritySetUp"/>
         <activity android:name=".GraphicalPasswordActivity"/>
         <activity android:name=".MainActivity"
             android:exported="true">
