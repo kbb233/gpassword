@@ -21,6 +21,9 @@
         <activity android:name=".CreateProfile"/>
         <activity android:name=".UserProfile"/>
         <activity android:name=".SecuritySetUp"/>
+        <activity android:name=".Login_Password"/>
+        <activity android:name=".GraphicalPasswordActivity_Login"/>
+
         <activity android:name=".GraphicalPasswordActivity"/>
         <activity android:name=".MainActivity"
             android:exported="true">

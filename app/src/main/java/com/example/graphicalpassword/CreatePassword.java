@@ -26,6 +26,7 @@ public class CreatePassword extends AppCompatActivity {
         String name = extras.getString("username");
         displayUsername.setText(name);
         initConfirmButton();
+
         displayGraphicalPassword = findViewById(R.id.display_gp);
         Button setGraphicalPasswordBtn = findViewById(R.id.set_graphical_btn);
         ActivityResultLauncher<Intent> graphicalPasswordActivityResultLauncher = registerForActivityResult(
