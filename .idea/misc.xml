@@ -11,6 +11,8 @@
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/fragment_graphical_password.xml" value="0.264" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/login.xml" value="0.3932291666666667" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/login_password.xml" value="0.314664386489953" />
+        <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/password_recovery.xml" value="0.3155194527575887" />
+        <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/password_recovery_process.xml" value="0.314664386489953" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/register.xml" value="0.4" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/user_profile.xml" value="0.34843950406156476" />
       </map>

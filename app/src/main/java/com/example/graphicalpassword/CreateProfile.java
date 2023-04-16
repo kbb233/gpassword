@@ -35,8 +35,8 @@ public class CreateProfile extends AppCompatActivity {
                     values.put(UserDataBaseHelper.COLUMN_USERNAME, getIntent().getStringExtra("username"));
                     values.put(UserDataBaseHelper.COLUMN_TEXT_PASSWORD, getIntent().getStringExtra("textPassword"));
                     values.put(UserDataBaseHelper.COLUMN_GRAPH_PASSWORD, getIntent().getStringExtra("graphicalPassword"));
-                    values.put(UserDataBaseHelper.COLUMN_QUESTION, getIntent().getStringExtra("question"));
-                    values.put(UserDataBaseHelper.COLUMN_ANSWER, getIntent().getStringExtra("answer"));
+                    values.put(UserDataBaseHelper.COLUMN_QUESTION, getIntent().getStringExtra("securityQuestion"));
+                    values.put(UserDataBaseHelper.COLUMN_ANSWER, getIntent().getStringExtra("securityAnswer"));
                     values.put(UserDataBaseHelper.COLUMN_PROFILE, profile);
                     long newRowId = db.insert(UserDataBaseHelper.TABLE_USERS, null, values);
 

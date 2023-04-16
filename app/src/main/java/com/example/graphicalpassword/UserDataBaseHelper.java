@@ -1,6 +1,8 @@
 package com.example.graphicalpassword;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -42,5 +44,28 @@ public class UserDataBaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
+    }
+
+    public Cursor getUserByUsername(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + " = ?";
+        String[] selectionArgs = {username};
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+        return cursor;
+    }
+
+    public int  updateUser(String username, String password, String graphicalPassword) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_TEXT_PASSWORD, password);
+        contentValues.put(COLUMN_GRAPH_PASSWORD, graphicalPassword);
+
+        String whereClause = COLUMN_USERNAME + "=?";
+        String[] whereArgs = new String[]{username};
+
+        int affectedRows = db.update(TABLE_USERS, contentValues, whereClause, whereArgs);
+        db.close();
+
+        return affectedRows;
     }
 }
