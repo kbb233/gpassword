@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height='120dp'>
+    android:layout_height='120dp'
+    android:background="@drawable/chamfer_item"
+    android:layout_margin="10dp"
+    >
 
     <TextView
         android:id="@+id/textView33"
@@ -28,7 +31,7 @@
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="16dp"
         android:text="Login Date"
         app:layout_constraintStart_toEndOf="@+id/textView33"
@@ -67,7 +70,7 @@
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
         android:text="OS: "
         app:layout_constraintStart_toEndOf="@+id/textView37"
@@ -86,7 +89,7 @@
         android:id="@+id/device_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/textView39"
         app:layout_constraintTop_toBottomOf="@+id/textView37" />
@@ -95,7 +98,7 @@
         android:id="@+id/os_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/textView40"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />

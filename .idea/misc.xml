@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/drawable/chamfer_item.xml" value="0.224" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/activity_graphical_password.xml" value="0.24320652173913043" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Android studio App/GraphicalPassword/app/src/main/res/layout/create_password.xml" value="0.264" />

@@ -119,6 +119,7 @@ public class UserDataBaseHelper extends SQLiteOpenHelper {
 
         String selection = LOGIN_USERNAME + "=?";
         String[] selectionArgs = {username};
+        String order = LOGIN_DATE_TIME + " DESC";
 
         Cursor cursor = db.query(
                 TABLE_LOGIN_INFO,
@@ -127,7 +128,7 @@ public class UserDataBaseHelper extends SQLiteOpenHelper {
                 selectionArgs,
                 null,
                 null,
-                null
+                order
         );
 
         if (cursor.moveToFirst()) {
