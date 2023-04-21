@@ -22,6 +22,7 @@
         <activity android:name=".UserProfile"/>
         <activity android:name=".SecuritySetUp"/>
         <activity android:name=".Login_Password"/>
+        <activity android:name=".LoginInfo"/>
         <activity android:name=".Password_Recovery"/>
         <activity android:name=".Password_Recovery_Process"/>
         <activity android:name=".GraphicalPasswordActivity_Recovery"/>
