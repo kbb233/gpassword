@@ -48,7 +48,8 @@ public class UserDataBaseHelper extends SQLiteOpenHelper {
             LOGIN_IP_ADDRESS + " TEXT, " +
             LOGIN_DATE_TIME + " TEXT, " +
             LOGIN_DEVICE + " TEXT, " +
-            LOGIN_OS + " TEXT)";
+            LOGIN_OS + " TEXT, " +
+            "FOREIGN KEY (" + LOGIN_USERNAME + ") REFERENCES " + TABLE_USERS + "(" + COLUMN_USERNAME + "));";
 
     public UserDataBaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
